@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3ecdf" />
+  <meta name="description" content="Discover timeless jewellery at Karthik Jewelry." />
+  <title>Karthik Jewelry | Beauty • Heritage • Elegance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="announcement">A little luxury, always <span>✦</span> Complimentary gift packaging on every order</div>
+  <header class="site-header">
+    <button class="icon-btn mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+    <a class="brand" href="#"><span class="brand-mark">K</span><span>KARTHIK <small>JEWELRY</small></span></a>
+    <nav id="mainNav">
+      <a href="#collections">Collections</a><a href="#bestsellers">Bestsellers</a><a href="#story">Our Story</a><a href="#footer">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="accountBtn" aria-label="Account">♙</button>
+      <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">♡</button>
+      <button class="cart-trigger" id="cartBtn">Bag <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">BEAUTY • HERITAGE • ELEGANCE</p>
+        <h1>Jewellery that<br><em>feels like you.</em></h1>
+        <p>Thoughtfully chosen pieces for celebrations, everyday moments and everything in between.</p>
+        <a class="button button-dark" href="#collections">EXPLORE COLLECTION <span>↗</span></a>
+      </div>
+      <div class="hero-art">
+        <div class="hero-orbit"></div>
+        <div class="hero-caption">THE ART OF ADORNMENT <span>01 / 05</span></div>
+        <div class="hero-image-label">Timeless pieces.<br>Personal stories.</div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><b>✧</b> Carefully curated</div><div><b>◇</b> Gift-ready packaging</div><div><b>♡</b> Made for every moment</div><div><b>↗</b> Delivery across India</div>
+    </section>
+
+    <section class="section" id="collections">
+      <div class="section-heading"><div><p class="eyebrow">FIND YOUR FOREVER PIECE</p><h2>Shop by collection</h2></div><p>From heritage-inspired classics to playful everyday accents.</p></div>
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-tile tile-temple" data-category="Temple Jewellery"><span>01</span><b>Temple Jewellery</b><small>Heritage, reimagined ↗</small></button>
+        <button class="category-tile tile-silver" data-category="Antique Silver"><span>02</span><b>Antique Silver</b><small>Quiet statement pieces ↗</small></button>
+        <button class="category-tile tile-kundan" data-category="Kundan & Bridal"><span>03</span><b>Kundan & Bridal</b><small>For your grand moments ↗</small></button>
+        <button class="category-tile tile-korean" data-category="Korean Fashion"><span>04</span><b>Korean Fashion</b><small>Everyday, elevated ↗</small></button>
+        <button class="category-tile tile-baby" data-category="Baby Jewellery"><span>05</span><b>Baby Jewellery</b><small>Tiny treasures ↗</small></button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="bestsellers">
+      <div class="section-heading"><div><p class="eyebrow">THE EDIT</p><h2>Discover our pieces</h2></div><div class="product-tools"><input id="searchInput" type="search" placeholder="Search jewellery..." /><select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="new">Newest</option></select></div></div>
+      <div class="filter-row"><button class="filter-chip active" data-filter="All">All pieces</button><button class="filter-chip" data-filter="Temple Jewellery">Temple</button><button class="filter-chip" data-filter="Antique Silver">Antique silver</button><button class="filter-chip" data-filter="Kundan & Bridal">Kundan & bridal</button><button class="filter-chip" data-filter="Korean Fashion">Korean</button><button class="filter-chip" data-filter="Baby Jewellery">Baby</button></div>
+      <div class="product-grid" id="productGrid"><div class="loading">Curating your collection…</div></div>
+    </section>
+
+    <section class="story-banner" id="story"><div class="story-seal">KJ<br><small>EST.</small></div><div><p class="eyebrow">A LITTLE LUXURY, ALWAYS</p><h2>Pieces to keep.<br>Memories to make.</h2><p>Karthik Jewelry brings together traditional inspiration and modern expression, so every piece feels special to wear and even more special to gift.</p><a href="#collections" class="text-link">DISCOVER OUR WORLD ↗</a></div></section>
+
+    <section class="newsletter"><p class="eyebrow">NOTES FROM OUR WORLD</p><h2>A little sparkle in your inbox.</h2><p>Be first to know about new collections and special launches.</p><form id="newsletterForm"><input type="email" id="newsletterEmail" placeholder="Your email address" required><button class="button button-dark">SIGN ME UP ↗</button></form><small id="newsletterMessage">By subscribing, you agree to receive store updates.</small></section>
+  </main>
+
+  <footer id="footer"><div class="footer-main"><div><a class="brand footer-brand" href="#"><span class="brand-mark">K</span><span>KARTHIK <small>JEWELRY</small></span></a><p>Beauty • Heritage • Elegance</p></div><div><b>Explore</b><a href="#collections">Collections</a><a href="#bestsellers">Shop all</a><a href="#story">Our story</a></div><div><b>Help</b><a href="#" data-page="shipping">Shipping & delivery</a><a href="#" data-page="returns">Returns & exchanges</a><a href="#" data-page="privacy">Privacy policy</a></div><div><b>Get in touch</b><a href="mailto:hello@karthikjewelry.com">hello@karthikjewelry.com</a><span>India</span><a id="whatsappLink" href="#">WhatsApp us ↗</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Karthik Jewelry. All rights reserved.</span><span>Made with care, worn with love.</span></div></footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="cartDrawer"><div class="drawer-head"><h3>Your bag <span id="drawerCount">(0)</span></h3><button class="close-btn" data-close>×</button></div><div id="cartItems" class="drawer-content"></div><div class="drawer-bottom"><div class="subtotal"><span>Subtotal</span><b id="cartSubtotal">₹0</b></div><small>Shipping and taxes calculated at checkout.</small><button class="button button-dark full" id="checkoutBtn">PROCEED TO CHECKOUT ↗</button></div></aside>
+
+  <div class="modal-backdrop" id="modalBackdrop"><section class="modal" id="modal"><button class="close-btn modal-close" data-close>×</button><div id="modalContent"></div></section></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
